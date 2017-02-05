@@ -24,18 +24,10 @@ module.exports = {
       },
       {
         test: /\.(css|styl|stylus)$/,
-        loaders: [
-          'style-loader',
-          'css-loader?minimize',
-          'stylus-loader',
-          'postcss-loader'
-        ]
-        // yo fountain-webapp을 그대로 사용했을때 build시 module loader 정상동작하지 않아
-        // build 되지 않음으로 위와 같이 처리한다.
-        // loaders: ExtractTextPlugin.extract({
-        //   fallbackLoader: 'style-loader',
-        //   loader: 'css-loader?minimize!stylus-loader!postcss-loader'
-        // })
+         loaders: ExtractTextPlugin.extract({
+           fallbackLoader: 'style-loader',
+           loader: 'css-loader?minimize!stylus-loader!postcss-loader'
+         })
       },
       {
         test: /\.ts$/,

@@ -2,25 +2,33 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {routing, RootComponent} from './routes';
 
-import {TechsModule} from './techs';
+//import {TechsModule} from './techs';
 
 import {MainComponent} from './main';
-import {HeaderComponent} from './header';
-import {TitleComponent} from './title';
-import {FooterComponent} from './footer';
+//import {Header} from './header';
+//import {Footer} from './footer';
+
+import {Front} from './front/front';
+import {Experience} from './experience/experience';
+import {Contact} from './contact/contact';
 
 @NgModule({
   imports: [
     BrowserModule,
     routing,
-    TechsModule
+    //TechsModule
   ],
   declarations: [
     RootComponent,
     MainComponent,
-    HeaderComponent,
-    TitleComponent,
-    FooterComponent
+    //Header,
+    //Footer,
+    //HeaderComponent,
+    //TitleComponent,
+    //FooterComponent,
+    Front,
+    Experience,
+    Contact
   ],
   bootstrap: [RootComponent]
 })
