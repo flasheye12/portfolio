@@ -1,10 +1,10 @@
 import {Component, ElementRef} from '@angular/core';
 
 @Component({
-    selector: 'section[experience]',
-    template: require('./experience.html')
+    selector: 'section[writing]',
+    template: require('./writing.html')
 })
-export class Experience {
+export class Writing {
     elementRef: ElementRef;
 
     constructor(elementRef: ElementRef) {

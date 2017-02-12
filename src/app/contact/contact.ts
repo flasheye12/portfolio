@@ -1,7 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 
 @Component({
-    selector: 'section[portfolio-contact]',
+    selector: 'section[contact]',
     template: require('./contact.html')
 })
-export class Contact {}
+export class Contact {
+    elementRef: ElementRef;
+
+    constructor(elementRef: ElementRef) {
+        this.elementRef = elementRef.nativeElement;
+    }
+}

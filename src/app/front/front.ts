@@ -1,7 +1,13 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 
 @Component({
-    selector: 'section[portfolio-front]',
+    selector: 'section[front]',
     template: require('./front.html')
 })
-export class Front {}
+export class Front {
+    elementRef: ElementRef;
+
+    constructor(elementRef: ElementRef) {
+        this.elementRef = elementRef.nativeElement;
+    }
+}
