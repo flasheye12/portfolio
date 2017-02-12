@@ -1,7 +1,46 @@
 .experience {
-	.experience-page {
-		img {
-			display: block;
-		}
-	}
+  position: relative;
+  height: 950px;
+
+  .experience-page {
+    position: relative;
+    // width: 600px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    > .experience-writing {
+      background-color: rgb(74,194,195);
+    }
+    > .experience-content {
+      position: relative;
+      margin: 0 auto;
+      width: 750px;
+
+      img {
+        
+        width: 100%;
+        box-shadow: 0 2px 11px rgba(0,0,0,.2), 0 0 1px rgba(0,0,0,.1), inset 0 -1px 2px rgba(14,60,86,.1);
+        margin-top: 20px;  
+      }
+    }
+    
+    .experience-side {
+      // display: none;
+      position: absolute;
+      top: 0;
+      
+      > img {
+        display: block;
+        width: 200px;
+      }
+    }
+    .experience-left {
+      left: -250px;
+    }
+    .experience-right {
+      left: 850px;
+    }
+  }
 }
