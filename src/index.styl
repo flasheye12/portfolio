@@ -1,6 +1,7 @@
 html, body, #root {
   margin: 0;
   height: 100%;
+  font-size: 13px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -28,12 +29,15 @@ a {
   //min-height: 100%;
 
   section.front {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: lavender;
+    background-color: #f4a460;
   }
 }
 
+@import 'app/common.styl'
 @import 'app/front/front.styl'
 @import 'app/header.styl'
 @import 'app/experience/experience.styl'
