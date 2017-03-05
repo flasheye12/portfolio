@@ -1,9 +1,22 @@
-<div class="main-container">
-  <header portfolio-header></header>
-  <section class="front" front></section>
-  <section class="writing" writing></section>
-  <section class="experience" experience></section>
-  <section class="evelope" evelope></section>
-  <section class="contact" contact></section>
-  <footer portfolio-footer></footer>
+<div class="scene" mouseWheel (mouseWheelUp)="prevItem()" (mouseWheelDown)="nextItem()">
+  <div class="page front">
+    <div class="content-wrapper" front></div>
+  </div>
+  <div class="page experience">
+    <div class="content-wrapper" experience></div>
+  </div>
+  <div class="page evelope">
+    <div class="content-wrapper" evelope></div>
+  </div>
+</div>
+<div class="nav-panel">
+  <div class="scroll-btn up" (click)="prevItem()"></div>
+  <div class="scroll-btn down" (click)="nextItem()"></div>
+  <nav>
+    <ul>
+      <li class="nav-btn nav-page1" [ngClass]="{'active': activeIndex === 0}" (click)="activeItem(0)"></li>
+      <li class="nav-btn nav-page2" [ngClass]="{'active': activeIndex === 1}" (click)="activeItem(1)"></li>
+      <li class="nav-btn nav-page3" [ngClass]="{'active': activeIndex === 2}" (click)="activeItem(2)"></li>
+    </ul>
+  </nav>
 </div>

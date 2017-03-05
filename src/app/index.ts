@@ -4,13 +4,11 @@ import {routing, RootComponent} from './routes';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 import {MainComponent} from './main';
-import {Header} from './header';
-import {Contact} from './contact/contact';
-import {Evelope} from './evelope/evelope';
-import {Experience} from './experience/experience';
 import {Front} from './front/front';
-import {Writing} from './writing/writing';
-import {Footer} from './footer';
+import {Experience} from './experience/experience';
+import {Evelope} from './evelope/evelope';
+
+import { MouseWheelDirective } from './util/mousewheel.directive';
 
 @NgModule({
   imports: [
@@ -21,13 +19,10 @@ import {Footer} from './footer';
   declarations: [
     RootComponent,
     MainComponent,
-    Header,
-    Contact,
-      Evelope,
-      Experience,
-      Front,
-      Writing,
-    Footer
+    Front,
+    Experience,
+    Evelope,
+    MouseWheelDirective
   ],
   bootstrap: [RootComponent]
 })

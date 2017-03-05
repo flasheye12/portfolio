@@ -1,7 +1,7 @@
 import {Component, ElementRef} from '@angular/core';
 
 @Component({
-    selector: 'section[evelope]',
+    selector: '[evelope]',
     template: require('./evelope.html')
 })
 export class Evelope {

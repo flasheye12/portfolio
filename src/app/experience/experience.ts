@@ -1,7 +1,7 @@
 import {Component, ElementRef} from '@angular/core';
 
 @Component({
-    selector: 'section[experience]',
+    selector: '[experience]',
     template: require('./experience.html')
 })
 export class Experience {
