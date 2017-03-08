@@ -21,7 +21,7 @@ export class Front {
       nativeElement.querySelectorAll('#canvas-dots')[0],
       nativeElement.querySelectorAll('#canvas-text')[0], 
       {
-        maxDotCount: 1900,
+        maxDotCount: 2450,
         getClientRect: () => {
           return {
             width: window.innerWidth,
@@ -86,72 +86,90 @@ export class Front {
         time: 5000,
         texts: [
           {
-            text: 'HTML CSS',
+            text: 'HTML',
             font: 'bold 82px Lato',
             x: centerX,
-            y: () => {return centerY() - 150;}
+            y: () => {return centerY() - 200;}
+          },
+          {
+            text: 'CSS',
+            font: 'bold 82px Lato',
+            x: centerX,
+            y: () => {return centerY() - 100;}
           },
           {
             text: 'ECMASCRIPT',
             font: 'bold 82px Lato',
             x: centerX,
-            y: () => {return centerY() - 50;}
+            y: centerY
           },
           {
             text: 'ANGULAR',
             font: 'bold 82px Lato',
             x: centerX,
-            y: () => {return centerY() + 50;}
+            y: () => {return centerY() + 100;}
           },
           {
-            text: 'SPECIALIST',
+            text: 'SPECIALIST.',
             font: 'bold 82px Lato',
             x: centerX,
-            y: () => {return centerY() + 150;}
+            y: () => {return centerY() + 200;}
           }
         ]
       },
       {
-        time: 10
-      }, 
+        time: 10,
+      },
       {
-        time: 7000,
+        time: 12000,
         texts: [
           {
             text: 'MAKING THE WEB',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 250;}
+            y: () => {return centerY() - 350;}
           },
           {
             text: 'MORE',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 150;}
+            y: () => {return centerY() - 250;}
           },
           {
             text: 'NOBLESS',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 50;}
+            y: () => {return centerY() - 150;}
           },
           {
             text: 'FABULOUS',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() + 50;}
+            y: () => {return centerY() - 50;}
           },
           {
             text: 'TURBULENCE',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() + 150;}
+            y: () => {return centerY() + 50;}
           },
           {
             text: 'GORGEOUS',
             font: '82px Lato',
             x: centerX,
+            y: () => {return centerY() + 150;}
+          },
+          {
+            text: 'BUT',
+            font: '82PX Lato',
+            x: centerX,
             y: () => {return centerY() + 250;}
+          },
+          {
+            text: 'DANGEROUS. What?',
+            font: '82px Lato',
+            x: centerX,
+            y: () => {return centerY() + 350;}
           }
         ]
       },
