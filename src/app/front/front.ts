@@ -21,7 +21,7 @@ export class Front {
       nativeElement.querySelectorAll('#canvas-dots')[0],
       nativeElement.querySelectorAll('#canvas-text')[0], 
       {
-        maxDotCount: 2450,
+        maxDotCount: 1850,
         getClientRect: () => {
           return {
             width: window.innerWidth,
@@ -121,55 +121,43 @@ export class Front {
         time: 10,
       },
       {
-        time: 12000,
+        time: 8000,
         texts: [
           {
             text: 'MAKING THE WEB',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 350;}
+            y: () => {return centerY() - 250;}
           },
           {
             text: 'MORE',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 250;}
+            y: () => {return centerY() - 150;}
           },
           {
             text: 'NOBLESS',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 150;}
+            y: () => {return centerY() - 50;}
           },
           {
             text: 'FABULOUS',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() - 50;}
+            y: () => {return centerY() + 50;}
           },
           {
             text: 'TURBULENCE',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() + 50;}
+            y: () => {return centerY() + 150;}
           },
           {
             text: 'GORGEOUS',
             font: '82px Lato',
             x: centerX,
-            y: () => {return centerY() + 150;}
-          },
-          {
-            text: 'BUT',
-            font: '82PX Lato',
-            x: centerX,
             y: () => {return centerY() + 250;}
-          },
-          {
-            text: 'DANGEROUS. What?',
-            font: '82px Lato',
-            x: centerX,
-            y: () => {return centerY() + 350;}
           }
         ]
       },
