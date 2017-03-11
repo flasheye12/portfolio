@@ -21,7 +21,7 @@ export class Front {
       nativeElement.querySelectorAll('#canvas-dots')[0],
       nativeElement.querySelectorAll('#canvas-text')[0], 
       {
-        maxDotCount: 1850,
+        maxDotCount: 2200,
         getClientRect: () => {
           return {
             width: window.innerWidth,
@@ -29,13 +29,13 @@ export class Front {
           };
         },
         colors: [
-          '255, 179, 186',
-          '255, 223, 186',
-          '255, 255, 186',
-          '186, 255, 201',
-          '186, 225, 255'
+          '46, 9, 39',
+          '217, 0, 0',
+          '255, 45, 0',
+          '255, 140, 0',
+          '4, 117, 111'
         ],
-        background: '#5C3A58'
+        background: '#BDD4DE'
       }
     );
     let centerX = () => {return window.innerWidth / 2};
@@ -43,37 +43,22 @@ export class Front {
     let scenario = [
       {
         time: 5000,
-        image: {
-          src: '/assets/images/my_face.png',
-          scale: {
-            x: 2,
-            y: 2
-          },
-          x: centerX,
-          y: centerY
-        }
-      },
-      {
-        time: 10
-      },
-      {
-        time: 5000,
         texts: [
           {
             text: 'I AM A',
-            font: 'bold 90px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 100;}
           },
           {
             text: 'FRONT-END',
-            font: 'bold 90px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: centerY
           },
           {
             text: 'DEVELOPER',
-            font: 'bold 90px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 100;}
           }
@@ -87,85 +72,143 @@ export class Front {
         texts: [
           {
             text: 'HTML',
-            font: 'bold 82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 200;}
           },
           {
             text: 'CSS',
-            font: 'bold 82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 100;}
           },
           {
             text: 'ECMASCRIPT',
-            font: 'bold 82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: centerY
           },
           {
             text: 'ANGULAR',
-            font: 'bold 82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 100;}
           },
           {
             text: 'SPECIALIST.',
-            font: 'bold 82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 200;}
           }
         ]
       },
       {
-        time: 10,
+        time: 10
       },
       {
         time: 8000,
         texts: [
           {
             text: 'MAKING THE WEB',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 250;}
           },
           {
             text: 'MORE',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 150;}
           },
           {
             text: 'NOBLESS',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() - 50;}
           },
           {
             text: 'FABULOUS',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 50;}
           },
           {
             text: 'TURBULENCE',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 150;}
           },
           {
             text: 'GORGEOUS',
-            font: '82px Lato',
+            font: 'bold 100px "Trebuchet MS"',
             x: centerX,
             y: () => {return centerY() + 250;}
           }
         ]
       },
       {
-        time: 2000
+        time: 10
+      },
+      {
+        time: 8000,
+        texts: [
+          {
+            text: 'Would you mind',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() - 250;}
+          },
+          {
+            text: 'looking',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() - 150;}
+          },
+          {
+            text: 'at',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() - 50;}
+          },
+          {
+            text: 'my resume?',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() + 50;}
+          },
+          {
+            text: 'Plase scroll down ',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() + 150;}
+          },
+          {
+            text: 'to see.',
+            font: 'bold 100px "Trebuchet MS"',
+            x: centerX,
+            y: () => {return centerY() + 250;}
+          }
+        ]
+      },
+      {
+        time: 10
+      },
+      {
+        time: 5000,
+        image: {
+          src: '/assets/images/my_face.png',
+          scale: {
+            x: 2,
+            y: 2
+          },
+          x: centerX,
+          y: centerY
+        }
+      },
+      {
+        time: 1000
       }
     ];
-
     dotsText.doSenario(scenario, true);
   }
 }
@@ -347,7 +390,7 @@ class DotsText {
       window['TweenLite'].to(dot, (3 + Math.round(Math.random() * 100) / 100), {
         x: that.randomNumber(0, that.dotsStageWidth),  
         y: that.randomNumber(0, that.dotsStageHeight),
-        alpha: .3,
+        alpha: .2,
         ease: (t) => {return (--t)*t*t+1;},
         onComplete: () => that.animateDot(dot, '', 'space')
       });
