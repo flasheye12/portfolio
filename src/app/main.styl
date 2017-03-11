@@ -53,6 +53,7 @@ $slide-number = 3;
 	  justify-content: center;
 	  backface-visibility: hidden;
 	  will-change: transform;
+    // transform: translateY(($parallax-offset / 2)); 
 	  transform: translateY($content-offset);
 	  transition: transform $transition-speed + .5 cubic-bezier(0.22, 0.44, 0, 1);
   }
@@ -172,7 +173,7 @@ $slide-number = 3;
 
 .sides {
   position: relative;
-  width: 500px;
+  width: 600px;
   height: 100%;
   margin: 0 auto;
   .side {
