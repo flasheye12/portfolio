@@ -52,6 +52,12 @@ module.exports = {
               replacement: function (match, p1, offset, string) {
                 return '<base href="/portfolio/">';
               }
+            },
+            {
+              pattern: /<script src="\/assets\/js\/TweenLite.min.js"><\/script>/ig,
+              replacement: function (match, p1, offset, string) {
+                return '<script src="assets/js/TweenLite.min.js"></script>';
+              }
             }
         ]})
       }
