@@ -11,6 +11,18 @@ const StringReplacePlugin = require("string-replace-webpack-plugin");
 module.exports = {
   module: {
     loaders: [
+      { 
+        test: /.+\.(ts|html)$/,
+        loader: StringReplacePlugin.replace({
+          replacements: [
+            {
+              pattern: /\/assets\//ig,
+              replacement: function (match, p1, offset, string) {
+                return './assets/';
+              }
+            }
+        ]})
+      },
       {
         test: /.json$/,
         loaders: [
@@ -51,12 +63,6 @@ module.exports = {
               pattern: /<base href="(\/)">/ig,
               replacement: function (match, p1, offset, string) {
                 return '<base href="/portfolio/">';
-              }
-            },
-            {
-              pattern: /<script src="\/assets\/js\/TweenLite.min.js"><\/script>/ig,
-              replacement: function (match, p1, offset, string) {
-                return '<script src="assets/js/TweenLite.min.js"></script>';
               }
             }
         ]})
