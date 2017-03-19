@@ -6,10 +6,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FailPlugin = require('webpack-fail-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const StringReplacePlugin = require("string-replace-webpack-plugin");
 
 module.exports = {
   module: {
     loaders: [
+      { 
+        test: /.+\.(ts|html)$/,
+        loader: StringReplacePlugin.replace({
+          replacements: [
+            {
+              pattern: /\/assets\//ig,
+              replacement: function (match, p1, offset, string) {
+                return './assets/';
+              }
+            }
+        ]})
+      },
       {
         test: /.json$/,
         loaders: [
@@ -41,6 +54,18 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
+      },
+      { 
+        test: /index.html$/,
+        loader: StringReplacePlugin.replace({
+          replacements: [
+            {
+              pattern: /<base href="(\/)">/ig,
+              replacement: function (match, p1, offset, string) {
+                return '<base href="/portfolio/">';
+              }
+            }
+        ]})
       }
     ]
   },
@@ -74,7 +99,8 @@ module.exports = {
           configuration: require('../tslint.json')
         }
       }
-    })
+    }),
+    new StringReplacePlugin()
   ],
   output: {
     path: path.join(process.cwd(), conf.paths.dist),

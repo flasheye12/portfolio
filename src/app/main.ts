@@ -28,6 +28,15 @@ export class MainComponent {
     this.ticking = false;
     this.sildeDuration = 600;
     this.activeIndex = 0;
+
+    window.onload = () => {
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+
+      if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+        alert('본 페이지는 인터넷 익스프롤러를 제외한 크롬, 파이어폭스, 엣지에서 원할하게 동작합니다.');
+      }
+    }
   }
 
   ngAfterContentInit() {
